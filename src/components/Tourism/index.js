@@ -4,7 +4,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Culture from "../Culture";
 
-
 const BASE_URL = "http://localhost:5000";
 
 function Tourism() {
@@ -54,14 +53,3 @@ function Tourism() {
 }
 
 export default Tourism;
-
-// <div
-//   onClick={() => {
-//     goInside(culture.id);
-//   }}
-//   className="oneculture"
-// >
-//   {culture.map}
-//   <img src={culture.img} alt="culture" />
-//   <h5> {culture.name} </h5>
-// </div>
