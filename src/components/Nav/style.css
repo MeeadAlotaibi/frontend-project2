@@ -1,0 +1,49 @@
+.ulNav {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  margin-right: 11%;
+  /* border-bottom:0.5px solid rgb(0, 0, 0); ; */
+}
+.nav {
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  margin-top: 10px;
+  padding-right: 30%;
+  font-family: fantasy;
+  font-size: 20px;
+}
+
+.liiFirst {
+  margin-left: 8px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.lii {
+  width: 100%;
+  margin-left: 13%;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.linkk {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.linkk:hover {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
