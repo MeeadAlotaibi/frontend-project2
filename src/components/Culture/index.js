@@ -8,28 +8,28 @@ const Culture = (props) => {
   const id = useParams().id;
 
   const getCulture = async () => {
-    const bigobj = await axios.get(
-      `${BASE_URL}/culture/allallculture`
-    );
+    /////////////////// تروح تجيب البيانات من الباك اند
+
+    const bigobj = await axios.get(`${BASE_URL}/culture/allallculture`);
     console.log(bigobj);
 
-    setCulture(bigobj.data.find((elem) => elem._id == id));
+    setCulture(bigobj.data.find((elem) => elem._id == id)); //////// <=== وتخزنهم في هذا المتغير وسويت عليها فايند بحيث تطلعع لي المتغير 
   };
 
-  useEffect(() => {
+  useEffect(() => {/////// بعدين اقول له روح ادخل على هذا العنصر و اعطيته الباث تبعه
     getCulture();
     // getAllUsers();
   }, []);
 
   return (
     <>
-    {console.log("ddjkdkd")}
+      {console.log("ddjkdkd")}
       {culture ? (
         <div className="oneitemHomeM">
           <p className="cultureP"> {culture.title}</p>
           <img src={culture.img} alt="" />
           <h6 className="hhh">{culture.description}</h6>
-          <h5 className="h5space">g</h5>
+          {/* <h5 className="h5space">g</h5> */}
         </div>
       ) : (
         <h1>loading ...</h1>
@@ -39,8 +39,3 @@ const Culture = (props) => {
 };
 
 export default Culture;
-{
-  /* <div>
-      <div>{props.elem.cat}</div>
-    </div> */
-}
