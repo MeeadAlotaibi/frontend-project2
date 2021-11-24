@@ -1,8 +1,9 @@
-///////
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Culture from "../Culture";
+import phootoo from "../../images/vrps.jpeg";
+
+// import Culture from "../Culture";
 
 const BASE_URL = "http://localhost:5000";
 
@@ -32,7 +33,8 @@ function Tourism() {
   };
 
   return (
-    <div className="allMovies">
+    <div className="allTourism">
+      <img className="backImg" src={phootoo} alt="backImg" />
       {cultures.map((elem) => {
         return (
           <>
@@ -40,9 +42,9 @@ function Tourism() {
               onClick={() => {
                 goInside(elem._id);
               }}
-              className="oneMovie"
+              className="oneTourism"
             >
-              <img src={elem.img} alt="culture" />
+              <img src={elem.img} alt="Tourism" />
               <h5> {elem.title} </h5>
             </div>
           </>

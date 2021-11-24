@@ -6,13 +6,29 @@ import Urban from "./components/Urban";
 import Tourism from "./components/Tourism";
 import Culture from "./components/Culture";
 import Cultures from "./components/Cultures";
-import User from "./components/User";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
 // import Footer from "./components/Footer/index";
 
+function logout() {
+  localStorage.removeItem("userId");
+  window.location.reload(false);
+}
 const App = () => {
   return (
     <>
+      {localStorage.getItem("userId") ? (
+        <button
+          onClick={() => {
+            logout();
+          }}
+        > خروج
+        </button>
+      ) : (
+        ""
+      )}
       <Nav />
+
       <Routes>
         <Route exact path="/Nav" element={<Nav />} />
         <Route exact path="/" element={<Home />} />
@@ -20,8 +36,8 @@ const App = () => {
         <Route exact path="/tourism" element={<Tourism />} />
         <Route exact path="/culture/:id" element={<Culture />} />
         <Route exact path="/cultures" element={<Cultures />} />
-    
-        <Route exact path="/user" element={<User />} />
+        <Route exact path="/user" element={<Signup />} />
+        <Route exact path="/login" element={<Login />} />
       </Routes>
 
       {/* <Footer /> */}

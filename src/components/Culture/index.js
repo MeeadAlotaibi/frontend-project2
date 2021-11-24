@@ -16,7 +16,7 @@ const Culture = (props) => {
     setCulture(bigobj.data.find((elem) => elem._id == id)); //////// <=== وتخزنهم في هذا المتغير وسويت عليها فايند بحيث تطلعع لي المتغير 
   };
 
-  useEffect(() => {/////// بعدين اقول له روح ادخل على هذا العنصر و اعطيته الباث تبعه
+  useEffect(() => {/////// بعدين اقول له روح ادخل على هذا العنصر -- و اعطيته الباث تبعه
     getCulture();
     // getAllUsers();
   }, []);
@@ -27,7 +27,7 @@ const Culture = (props) => {
       {culture ? (
         <div className="oneitemHomeM">
           <p className="cultureP"> {culture.title}</p>
-          <img src={culture.img} alt="" />
+          <img className="Oneculture" src={culture.img} alt="" />
           <h6 className="hhh">{culture.description}</h6>
           {/* <h5 className="h5space">g</h5> */}
         </div>
