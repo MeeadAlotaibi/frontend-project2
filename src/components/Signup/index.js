@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-// import "./style.css";
+import "./style.css";
 
 const BASE_URL = "http://localhost:5000";
 
@@ -41,55 +41,61 @@ const SignUp = () => {
 
   return (
     <>
-      <form>
-        <div className="signUpInput">
-          تسجيل
-          <input
-            type="text"
-            placeholder=" username"
-            onChange={(e) => {
-              setUsername(e.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder=" email"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-          />
-          <input
-            type="password"
-            placeholder=" password"
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-          />
-          <button
-            onClick={() => {
-              let found = users.find((ele) => {
-                return ele.email == email;
-              });
-              if (found) {
-                console.log(found);
-                <p className="accountText">
-                  {setMessage(
-                    "This email already have an account! log in or change your email"
-                  )}
-                </p>;
-              } else {
-                createNew();
-              }
-            }}
-          >
-            سجل الآن
-          </button>
-        </div>
-        <div>
-          هل لديك حساب ؟ <Link to="/login">تسجيل دخول </Link>
-        </div>
-        {message}
-      </form>
+      <div className="containerForm">
+        <form className="formm">
+          <div className="signUpInput">
+            <h6 className="register">تسجيل</h6>
+            <input
+              className="inputt1"
+              type="text"
+              placeholder=" username"
+              onChange={(e) => {
+                setUsername(e.target.value);
+              }}
+            />
+            <input
+              className="inputt1"
+              type="text"
+              placeholder=" email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
+            <input
+              className="inputt1"
+              type="password"
+              placeholder=" password"
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
+            />
+            <button
+              className="userBtn"
+              onClick={() => {
+                let found = users.find((ele) => {
+                  return ele.email == email;
+                });
+                if (found) {
+                  console.log(found);
+                  <p className="accountText">
+                    {setMessage(
+                      "This email already have an account! log in or change your email"
+                    )}
+                  </p>;
+                } else {
+                  createNew();
+                }
+              }}
+            >
+              سجل الآن
+            </button>
+            <div >
+              هل لديك حساب ؟ <Link to="/login">تسجيل دخول </Link>
+            </div>
+            {message}
+          </div>
+        </form>
+      </div>
     </>
   );
 };

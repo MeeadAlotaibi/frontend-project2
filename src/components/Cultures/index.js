@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Culture from "../Culture";
+import riyadhArt from "../../images/riyadh-art.png";
+
+import "./style.css";
 
 const BASE_URL = "http://localhost:5000";
 
@@ -20,7 +22,7 @@ function Cultures() {
       `${BASE_URL}/culture/allculture?cat=culture` //// اغير بس الكلمة هذي
     );
     console.log(cultures.data); ///////// <=== عشان نشوف الداتا في الكونسول ونتاكد انها وصلت لنا !!
-    setCultures(cultures.data); //////// <=== وتخزنهم في هذا المتغير
+    setCultures(cultures.data); //////// <===وتخزنهم في هذا المتغير  وتتغير الكلتشر بدال ماهي ارراي فاضية تصير تحتوي على هذه البيانات 
   };
 
   /////////////////////////////////////////////////////////////////////////////////////////
@@ -34,20 +36,22 @@ function Cultures() {
   return (
     /////// هنا يعرض لي ع البراوزر
     <div className="allCluture">
+      <img className="backImg1" src={riyadhArt} alt="backImg" />
+      <h1 className="text1">مشاريع ثقافية</h1>
+
       {cultures.map((elem) => {
         ///// يروح يمشي ع كل عنصر في الكولتشر وانو اذا ضغطت على هذا العنصر يستدعي فنكشن قو انسايد
         return (
           <>
-            <div
-              onClick={() => {
-                goInside(elem._id);
-              }} /// <========= هنا راح يدخل عن طريق الآيدي
-              className="oneCluture"
-            >
-              <img src={elem.img} alt="culture" /> {/*هنا يعرض الصورة  */}
-              <h5> {elem.title} </h5>
-              {/*هنا يعرض إسم الصورة  */}
-            </div>
+              <div
+                onClick={() => {
+                  goInside(elem._id);
+                }}
+                className="oneCluture"
+              >
+                <img src={elem.img} alt="culture" />
+                <h5 className="cultureName"> {elem.title} </h5>
+              </div>
           </>
         );
       })}

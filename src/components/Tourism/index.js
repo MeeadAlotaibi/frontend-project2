@@ -3,26 +3,25 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import phootoo from "../../images/vrps.jpeg";
 
-// import Culture from "../Culture";
 
 const BASE_URL = "http://localhost:5000";
 
 function Tourism() {
-  const [cultures, setCultures] = useState([]);
+  const [tourism, setTourism] = useState([]);
   let navigate = useNavigate();
 
   /////////////////// وظيفة اليوزإفكت تعطيه أمر بأنهاول مايدخل الصفحة يعرض لي هذي البيانات
   useEffect(() => {
-    getAllCultures();
+    getAllTourism();
   }, []);
 
   /////////////////// تروح تجيب البيانات من الباك اند
-  const getAllCultures = async () => {
-    const cultures = await axios.get(
+  const getAllTourism = async () => {
+    const tourism = await axios.get(
       `${BASE_URL}/culture/allculture?cat=tourism` //// اغير بس الكلمة هذي
     );
-    console.log(cultures.data);
-    setCultures(cultures.data); //////// <=== وتخزنهم في هذا المتغير
+    console.log(tourism.data);
+    setTourism(tourism.data); //////// <=== وتخزنهم في هذا المتغير
   };
 
   /////////////////////////////////////////////////////////////////////////////////////////
@@ -34,8 +33,10 @@ function Tourism() {
 
   return (
     <div className="allTourism">
-      <img className="backImg" src={phootoo} alt="backImg" />
-      {cultures.map((elem) => {
+      <img className="backImg2" src={phootoo} alt="backImg" />
+      <h1 className="text2">مشاريع سياحية</h1>
+
+      {tourism.map((elem) => {
         return (
           <>
             <div
@@ -45,7 +46,7 @@ function Tourism() {
               className="oneTourism"
             >
               <img src={elem.img} alt="Tourism" />
-              <h5> {elem.title} </h5>
+              <h5 className="tourismName"> {elem.title} </h5>
             </div>
           </>
         );

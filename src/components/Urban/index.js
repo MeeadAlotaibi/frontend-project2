@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Culture from "../Culture";
 
 const BASE_URL = "http://localhost:5000";
 
@@ -33,7 +32,7 @@ function Cultures() {
 
   return (
     /////// هنا يعرض لي ع البراوزر
-    <div className="allCluture">
+    <div className="allUrban">
       {cultures.map((elem) => {
         ///// يروح يمشي ع كل عنصر في الكولتشر وانو اذا ضغطت على هذا العنصر يستدعي فنكشن قو انسايد
         return (
@@ -42,9 +41,9 @@ function Cultures() {
               onClick={() => {
                 goInside(elem._id); /// <========= هنا راح يدخل عن طريق الآيدي
               }}
-              className="oneCluture"
+              className="oneUrban"
             >
-              <img src={elem.img} alt="culture" /> {/*هنا يعرض الصورة  */}
+              <img src={elem.img} alt="Urban" /> {/*هنا يعرض الصورة  */}
               <h5> {elem.title} </h5>
               {/*هنا يعرض إسم الصورة  */}
             </div>

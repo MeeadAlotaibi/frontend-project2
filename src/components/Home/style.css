@@ -12,15 +12,16 @@
 }
 
 .headerText1 {
-  width: 40%;
-  color: rgb(240, 236, 236);
-  position: absolute;
+  width: 45%;
+  color: rgb(146, 93, 33);
+  position:absolute;
   top: 268px;
   right: 740px;
-  font-family: "Mirza", cursive;
-  font-size: 35px;
-  text-align: right;
-  margin-left: 70%;
+  font-family: "Mirza";
+
+  font-size: 45px;
+  text-align:center;
+  /* margin-left: 70%; */
 }
 
 .headerText {

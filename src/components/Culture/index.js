@@ -13,10 +13,11 @@ const Culture = (props) => {
     const bigobj = await axios.get(`${BASE_URL}/culture/allallculture`);
     console.log(bigobj);
 
-    setCulture(bigobj.data.find((elem) => elem._id == id)); //////// <=== وتخزنهم في هذا المتغير وسويت عليها فايند بحيث تطلعع لي المتغير 
+    setCulture(bigobj.data.find((elem) => elem._id == id)); //////// <=== وتخزنهم في هذا المتغير وسويت عليها فايند بحيث تطلعع لي المتغير
   };
 
-  useEffect(() => {/////// بعدين اقول له روح ادخل على هذا العنصر -- و اعطيته الباث تبعه
+  useEffect(() => {
+    /////// بعدين اقول له روح ادخل على هذا العنصر -- و اعطيته الباث تبعه
     getCulture();
     // getAllUsers();
   }, []);
