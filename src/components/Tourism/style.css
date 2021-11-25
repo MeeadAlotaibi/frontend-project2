@@ -4,7 +4,11 @@
   position: relative;
   margin-top: -20px;
 }
-
+.picTourism{
+width: 350px;
+  height: 350px;
+  border-radius: 20px;
+}
 .allTourism {
   display: flex;
   justify-content: center;
@@ -31,19 +35,19 @@
   transform: scale(1.1) perspective(0.1px);
   cursor: pointer;
 }
-.allTourism div img {
+/* .allTourism div img {
   width: 350px;
   height: 350px;
   border-radius: 20px;
-}
+} */
 .text2 {
   width: 40%;
   color: #fff;
   line-height: 11rem;
   position: absolute;
   top: 268px;
-  right: 740px;
-font-family: "Bukra Bold";
+  right: 450px;
+  font-family: "Bukra Bold";
   font-size: 100px;
   margin-top: 1.4rem;
   text-align: center;

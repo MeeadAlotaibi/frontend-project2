@@ -1,7 +1,12 @@
-.containerForm {
-  margin: auto;
-}
+/* .containerForm {
+height: 100%;
+  width: 100%;
+background-image: url("../../images/registerBackground.jpeg");
+  background-size: cover;
+} */
 .signUpInput {
+  /* height: 100%;
+  width: 100%; */
   display: grid;
   justify-content: center;
   align-items: center;
@@ -28,7 +33,7 @@
   background-color: rgb(129, 125, 125);
 }
 .inputt1 {
-   margin-top: 12%; 
+  margin-top: 12%;
   padding: 5px;
   border-radius: 5px;
   border-style: none;
@@ -37,8 +42,8 @@
 .formm {
   margin-top: 50px;
 }
-.register{
-    margin: auto;
-    align-items: center;
-    font-size: larger;
+.register {
+  margin: auto;
+  align-items: center;
+  font-size: larger;
 }

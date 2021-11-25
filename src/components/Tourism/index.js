@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import phootoo from "../../images/vrps.jpeg";
+import "./style.css";
 
 
 const BASE_URL = "http://localhost:5000";
@@ -30,6 +31,7 @@ function Tourism() {
     console.log(id);
     navigate(`/culture/${id}`);
   };
+////////////////////////////////////////////////////////////////
 
   return (
     <div className="allTourism">
@@ -39,13 +41,8 @@ function Tourism() {
       {tourism.map((elem) => {
         return (
           <>
-            <div
-              onClick={() => {
-                goInside(elem._id);
-              }}
-              className="oneTourism"
-            >
-              <img src={elem.img} alt="Tourism" />
+            <div onClick={() => {goInside(elem._id);}}className="oneTourism">
+              <img src={elem.img} alt="Tourism" className="picTourism" />
               <h5 className="tourismName"> {elem.title} </h5>
             </div>
           </>

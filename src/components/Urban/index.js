@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import foto from "../../images/alula.png";
+
+import "./style.css";
 
 const BASE_URL = "http://localhost:5000";
 
@@ -33,19 +36,15 @@ function Cultures() {
   return (
     /////// هنا يعرض لي ع البراوزر
     <div className="allUrban">
+      <img className="backImg2" src={foto} alt="backImg" /> 
+      <h1 className="text2">مشاريع سياحية</h1> 
       {cultures.map((elem) => {
         ///// يروح يمشي ع كل عنصر في الكولتشر وانو اذا ضغطت على هذا العنصر يستدعي فنكشن قو انسايد
         return (
           <>
-            <div
-              onClick={() => {
-                goInside(elem._id); /// <========= هنا راح يدخل عن طريق الآيدي
-              }}
-              className="oneUrban"
-            >
-              <img src={elem.img} alt="Urban" /> {/*هنا يعرض الصورة  */}
-              <h5> {elem.title} </h5>
-              {/*هنا يعرض إسم الصورة  */}
+            <div onClick={() => {goInside(elem._id);}}className="oneUrban">
+              <img src={elem.img} alt="Urban" className="picUrban" />
+              <h5 className="urbanName"> {elem.title} </h5>
             </div>
           </>
         );

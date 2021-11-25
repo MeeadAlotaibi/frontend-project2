@@ -7,8 +7,8 @@
   margin-right: 11%;
   /* border-bottom:0.5px solid rgb(0, 0, 0); ; */
 }
-.nav {
-  opacity: 0.9;
+.containerNav {
+  /* opacity: 0.9; */
   display: flex;
   justify-content: space-between;
 }
@@ -20,30 +20,28 @@ h2 {
   font-size: 20px;
 }
 
-.liiFirst {
-  margin-left: 8px;
-  list-style: none;
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
+
 
 .lii {
-  width: 100%;
-  margin-left: 13%;
-  list-style: none;
   text-decoration: none;
   color: black;
-  font-size: 18px;
+  cursor: pointer;
+  /* font-size: 3vh; */
+
+  margin-left: 10px;
+  list-style: none;
+
+  /* color: black; */
+  /* font-size: 18px; */
 }
 
 .linkk {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(73, 72, 72);
 }
 
 .linkk:hover {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(73, 72, 72);
   font-weight: 700;
 }
