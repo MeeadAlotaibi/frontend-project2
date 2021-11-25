@@ -54,7 +54,7 @@ const Login = () => {
             if (found) {
               //navigate first
               navigate(`/`);
-              localStorage.setItem("userId", JSON.stringify(found._id));
+              localStorage.setItem("userId", JSON.stringify(found));
               console.log("your in ");
               window.location.reload(false);
             } else {

@@ -8,16 +8,18 @@ import Culture from "./components/Culture";
 import Cultures from "./components/Cultures";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
+import BookMark from "./components/BookMark";
+
 // import Footer from "./components/Footer/index";
 
-function logout() {
-  localStorage.removeItem("userId");
-  window.location.reload(false);
-}
+// function logout() {
+//   localStorage.removeItem("userId");
+//   window.location.reload(false);
+// }
 const App = () => {
   return (
     <>
-      {localStorage.getItem("userId") ? (
+      {/* {localStorage.getItem("userId") ? (
         <button
           onClick={() => {
             logout();
@@ -26,7 +28,8 @@ const App = () => {
         </button>
       ) : (
         ""
-      )}
+      )} */}
+
       <Nav />
 
       <Routes>
@@ -38,6 +41,8 @@ const App = () => {
         <Route exact path="/cultures" element={<Cultures />} />
         <Route exact path="/user" element={<Signup />} />
         <Route exact path="/login" element={<Login />} />
+
+        <Route exact path="/Favorite" element={<BookMark />} />
       </Routes>
 
       {/* <Footer /> */}

@@ -20,7 +20,12 @@ h2 {
   font-size: 20px;
 }
 
+.loguot{
+  background-color:white;
+  border-color: white;
+  border-radius: px;
 
+}
 
 .lii {
   text-decoration: none;
@@ -37,11 +42,11 @@ h2 {
 
 .linkk {
   text-decoration: none;
-  color: rgb(73, 72, 72);
+  color: rgb(2 2 88);
 }
 
 .linkk:hover {
   text-decoration: none;
-  color: rgb(73, 72, 72);
+  color: rgb(2 2 88);
   font-weight: 700;
 }

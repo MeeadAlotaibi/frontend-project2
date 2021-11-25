@@ -3,9 +3,6 @@ import photo from "../../images/homepic2.jpeg";
 import photoo from "../../images/vision32.jpeg";
 
 import "./style.css";
-// https://www.vision2030.gov.sa/ar/v2030/overview/
-
-
 ///////////////////////////////////////////////////////////////////////////////
 const Home = () => {
   return (

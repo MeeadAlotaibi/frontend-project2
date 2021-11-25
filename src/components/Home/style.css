@@ -12,12 +12,13 @@
 }
 
 .headerText1 {
+  font-family: 'Aref Ruqaa', serif;
   width: 45%;
   color: rgb(2 2 88);
   position: absolute;
   top: 268px;
   right: 68px;
-  font-family: "Mirza";
+  /* font-family: "Mirza"; */
 
   font-size: 45px;
   text-align: center;
