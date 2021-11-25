@@ -5,49 +5,47 @@ import logo from "./../../images/Vision.png";
 
 const Nav = () => {
   return (
-    <div className="nav">
+    <div className="containerNav">
       <ul className="ulNav">
-
-
         <li className="lii">
-          <Link className="linkk" to="/user">
-            تسجيل
-          </Link>
+          <h4>
+            <Link className="linkk" to="/user">
+              تسجيل
+            </Link>
+          </h4>
         </li>
 
-
         <li className="lii">
-          <Link className="linkk" to="/urban">
-            ثقافي
-          </Link>
+          <h4>
+            <Link className="linkk" to="/urban">
+              ثقافي
+            </Link>
+          </h4>
         </li>
 
-
-
         <li className="lii">
-          <Link className="linkk" to="/tourism">
-            سياحة
-          </Link>
+          <h4>
+            <Link className="linkk" to="/tourism">
+              سياحة
+            </Link>
+          </h4>
         </li>
 
-
-
         <li className="lii">
-          <Link className="linkk" to="/cultures">
-            حضاري
-          </Link>
+          <h4>
+            <Link className="linkk" to="/cultures">
+              حضاري
+            </Link>
+          </h4>
         </li>
 
-
-
-        <li className="liiFirst">
+        <li className="lii">
+          <h4>
           <Link id="firstli" className="linkk" to="/">
             الرئيسية
           </Link>
+          </h4>
         </li>
-
-
-        
       </ul>
       <div>
         <img className="logoImg" src={logo} alt="logoImg" />

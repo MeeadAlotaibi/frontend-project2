@@ -1,4 +1,27 @@
 .Oneculture {
-  height: 900px;
-  width: 900px;
+  width: 600px;
+  height: 450px;
+  border-radius: 20px;
+  box-shadow: black;
+}
+.oneitemHomeM{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content:space-around;
+  
+}
+.descripation{
+  margin-top: 20px;
+  height: 400px;
+  width: 400px;
+  text-align: center;
+   font-size: 30px;
+}
+.hhh{
+  font-size: 30px;
+}
+.cultureP{
+font-size: 30px;
+margin-left: 200px;
 }

@@ -2,7 +2,7 @@
   width: 100%;
   height: 900px;
   position: relative;
-  margin-top: -20px;
+  margin-top: 10px;
 }
 .backImgs {
   margin-top: 250px;
@@ -13,14 +13,14 @@
 
 .headerText1 {
   width: 45%;
-  color: rgb(146, 93, 33);
-  position:absolute;
+  color: rgb(2 2 88);
+  position: absolute;
   top: 268px;
-  right: 740px;
+  right: 68px;
   font-family: "Mirza";
 
   font-size: 45px;
-  text-align:center;
+  text-align: center;
   /* margin-left: 70%; */
 }
 
