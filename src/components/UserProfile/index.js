@@ -3,18 +3,18 @@ import profileImage from "../../images/profileImage.png";
 import "./style.css";
 
 const UserProfile = () => {
-  const [logged, setLogged] = useState([]);
+  const [user, setUser] = useState([]);
   useEffect(() => {
-    const userLogged = localStorage.getItem("userId");
-    console.log(userLogged);
-    setLogged(JSON.parse(userLogged));
+    const userLoged = localStorage.getItem("userId");
+    console.log(user);
+    setUser(JSON.parse(userLoged));
   }, []);
 
-console.log(logged);
+console.log(user);
 
   return (
     <>
-      {logged ? (
+      {user ? (
         <div className="oneitemHomeM">
           <h1>Profile : </h1>
           <div>
@@ -24,9 +24,9 @@ console.log(logged);
               alt="profile Image"
             />
             <br />
-            <h3 className="cultureP"> {logged.username}</h3>
+            <h3 className="cultureP"> {user.username}</h3>
           </div>
-          <h6 className="hhh">{logged.password}</h6>
+          <h6 className="hhh">{user.password}</h6>
         </div>
       ) : (
         <h1>loading ...</h1>
