@@ -5,10 +5,8 @@
   padding-bottom: 20px;
   background-color: rgb(255, 255, 255);
   margin-right: 11%;
-  /* border-bottom:0.5px solid rgb(0, 0, 0); ; */
 }
 .containerNav {
-  /* opacity: 0.9; */
   display: flex;
   justify-content: space-between;
 }
@@ -31,13 +29,8 @@ h2 {
   text-decoration: none;
   color: black;
   cursor: pointer;
-  /* font-size: 3vh; */
-
   margin-left: 10px;
   list-style: none;
-
-  /* color: black; */
-  /* font-size: 18px; */
 }
 
 .linkk {
@@ -46,7 +39,7 @@ h2 {
 }
 
 .linkk:hover {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: rgb(2 2 88);
-  font-weight: 700;
+  /* font-weight: 700; */
 }

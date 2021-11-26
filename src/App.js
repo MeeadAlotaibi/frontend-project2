@@ -9,31 +9,15 @@ import Cultures from "./components/Cultures";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import BookMark from "./components/BookMark";
+import UserProfile from "./components/UserProfile";
 
-// import Footer from "./components/Footer/index";
 
-// function logout() {
-//   localStorage.removeItem("userId");
-//   window.location.reload(false);
-// }
+
 const App = () => {
   return (
     <>
-      {/* {localStorage.getItem("userId") ? (
-        <button
-          onClick={() => {
-            logout();
-          }}
-        > خروج
-        </button>
-      ) : (
-        ""
-      )} */}
-
       <Nav />
-
       <Routes>
-        {/* <Route exact path="/Nav" element={<Nav />} /> */}
         <Route exact path="/" element={<Home />} />
         <Route exact path="/urban" element={<Urban />} />
         <Route exact path="/tourism" element={<Tourism />} />
@@ -41,10 +25,9 @@ const App = () => {
         <Route exact path="/cultures" element={<Cultures />} />
         <Route exact path="/user" element={<Signup />} />
         <Route exact path="/login" element={<Login />} />
-        <Route exact path="/Favorite" element={<BookMark />} />
+        <Route exact path="/bookMark" element={<BookMark />} />
+        <Route exact path="/profile" element={<UserProfile />} />
       </Routes>
-
-      {/* <Footer /> */}
     </>
   );
 };

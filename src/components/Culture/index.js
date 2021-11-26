@@ -19,7 +19,7 @@ const Culture = (props) => {
     // تروح تجيب البيانات من الباك اند
     const bigobj = await axios.get(`${BASE_URL}/culture/allallculture`);
     console.log(bigobj);
-    setCulture(bigobj.data.find((elem) => elem._id == id)); //////// <=== وتخزنهم في هذا المتغير وسويت عليها فايند بحيث تطلعع لي المتغير
+    setCulture(bigobj.data.find((elem) => elem._id == id)); //////// <=== وتخزنهم في هذا المتغير وسويت عليها فايند بحيث تطلع لي المتغير
   };
 
   //////////////////////////////////////////////////////////////////
@@ -36,7 +36,8 @@ const Culture = (props) => {
     setLocal(item);
     setRemAdd(item.data);
   };
-  //////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////
+
 
   const removeOrAdd = async (id) => {
     let test = [];
@@ -56,7 +57,7 @@ const Culture = (props) => {
       );
       console.log("removed");
     } else {
-      document.getElementById(`${id}`).innerHTML = "remove";
+      document.getElementById(`${id}`).innerHTML = "إزالة";
 
       await axios.put(
         `http://localhost:5000/user/fav/${userEmail.email}/${id}`
@@ -66,8 +67,7 @@ const Culture = (props) => {
     test = [];
     getDataEmail();
   };
-
-  //////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////
 
   return (
     <>
@@ -85,8 +85,7 @@ const Culture = (props) => {
             id={culture._id}
             onClick={() => removeOrAdd(culture._id)}
           >
-            add To cart
-          </button>
+           إقراء لاحقاً         </button>
         </div>
       ) : (
         <h1>loading ...</h1>
