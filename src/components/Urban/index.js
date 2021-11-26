@@ -37,7 +37,7 @@ function Cultures() {
     /////// هنا يعرض لي ع البراوزر
     <div className="allUrban">
       <img className="backImg2" src={foto} alt="backImg" /> 
-      <h1 className="text2">مشاريع سياحية</h1> 
+      <h1 className="text2">مشاريع حضارية</h1> 
       {cultures.map((elem) => {
         ///// يروح يمشي ع كل عنصر في الكولتشر وانو اذا ضغطت على هذا العنصر يستدعي فنكشن قو انسايد
         return (

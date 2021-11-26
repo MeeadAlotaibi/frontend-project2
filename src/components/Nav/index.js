@@ -7,26 +7,47 @@ function logout() {
   localStorage.removeItem("userId");
   window.location.reload(false);
 }
+
+
+/////// قدعنه
+function hide() {
+  // localStorage.removeItem("userId");
+  window.location.reload(true);
+}
+
+
 const Nav = () => {
   return (
     <div className="containerNav">
       <ul className="ulNav">
-        <li >
-          
-          {localStorage.getItem("userId") ? (<button className="loguot"  onClick={() => { logout();}}>خروج</button>) : ("")}
-        </li>
+
         <li className="lii">
           <h4>
-            <Link className="linkk" to="/user">
-              تسجيل
+          {localStorage.getItem("userId") ? ( <Link className="linkk"  to="/" onClick={() => { logout();}}>خروج</Link> ) : ("")}
+          </h4>
+        </li>
+
+
+        <li className="lii">
+          <h4>
+            <Link className="linkk" to="/Favorite">
+              قراءة لاحقاً
             </Link>
           </h4>
         </li>
 
         <li className="lii">
           <h4>
+            {localStorage.getItem("userId") ? ("")  : (<Link className="linkk" to="/user" onChange={() => { hide(); }}>تسجيل</Link> )}
+          </h4>
+        </li>
+
+      
+
+        <li className="lii">
+          <h4>
             <Link className="linkk" to="/urban">
-              ثقافي
+              حضاري
             </Link>
           </h4>
         </li>
@@ -42,7 +63,7 @@ const Nav = () => {
         <li className="lii">
           <h4>
             <Link className="linkk" to="/cultures">
-              حضاري
+              ثقافي
             </Link>
           </h4>
         </li>
