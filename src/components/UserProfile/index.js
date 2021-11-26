@@ -10,7 +10,7 @@ const UserProfile = () => {
     setUser(JSON.parse(userLoged));
   }, []);
 
-console.log(user);
+  console.log(user);
 
   return (
     <>
