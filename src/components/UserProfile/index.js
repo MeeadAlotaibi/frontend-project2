@@ -1,50 +1,38 @@
-// import React, { useState, useEffect } from "react";
-// import axios from "axios";
+import React, { useState, useEffect } from "react";
+import profileImage from "../../images/profileImage.png";
+import "./style.css";
 
-// const BASE_URL = "http://localhost:5000";
+const UserProfile = () => {
+  const [user, setUser] = useState([]);
+  useEffect(() => {
+    const userLoged = localStorage.getItem("userId");
+    console.log(user);
+    setUser(JSON.parse(userLoged));
+  }, []);
 
-// const User = () => {
-//   const [users, setusers] = useState([]);
-//   const [AddinputSignvalue, setAddinputSignvalue] = useState("");
-//   const [AddinputLogvalue, setAddinputLogvalue] = useState("");
-//   const [text, setText] = useState("Welcome");
+  console.log(user);
 
-//   useEffect(() => {
-//     getAllUsers();
-//   }, []);
-//   const getAllUsers = async () => {
-//     const users = await axios.get(`${BASE_URL}/user/alluser`);
-//     setusers(users.data);
-//   };
+  return (
+    <>
+      {user ? (
+        <div className="oneitemHomeM">
+          <h1>Profile : </h1>
+          <div>
+            <img
+              className="Oneculture"
+              src={profileImage}
+              alt="profile Image"
+            />
+            <br />
+            <h3 className="cultureP"> {user.username}</h3>
+          </div>
+          <h6 className="hhh">{user.password}</h6>
+        </div>
+      ) : (
+        <h1>loading ...</h1>
+      )}
+    </>
+  );
+};
 
-//   //////////////////////////////////////////////////////////////////
-//   // تنشئ يوزر جديد
-
-//   const createNew = () => {
-//     //   console.log("create");
-//     let obj = {
-//       id: users.length + 1,
-//       userName: AddinputSignvalue,
-      
-//     };
-//     axios
-//       .post(`${BASE_URL}/user/signup`, obj)
-//       .then(() => console.log(" User Created "))
-//       .catch((err) => {
-//         console.error(err);
-//       });
-//     console.log(users);
-//   };
-// //////////////////// Log Out 
-
-//   const logOut = () => {
-//     localStorage.clear(); 
-//     console.log("log out");
-//   };
-
-//   let userId = JSON.parse(localStorage.getItem("userId"));
-//   console.log(userId);
-//   return <div></div>;
-// };
-
-// export default User;
+export default UserProfile;

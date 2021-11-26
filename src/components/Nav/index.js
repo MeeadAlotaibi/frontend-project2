@@ -1,48 +1,97 @@
-import { Link } from "react-router-dom";
-import "./style.css";
 import React from "react";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "./../../images/Vision.png";
+import "./style.css";
 
-function logout() {
-  localStorage.removeItem("userId");
-  window.location.reload(false);
-}
-
-
-/////// قدعنه
-function hide() {
-  // localStorage.removeItem("userId");
-  window.location.reload(true);
-}
 
 
 const Nav = () => {
+  let navigate = useNavigate();
+
+  function logout() {
+    navigate(`/`);
+    localStorage.removeItem("userId");
+    window.location.reload(false);
+  }
+
+  function hide() {
+    window.location.reload(false); /// reload(true)
+  }
   return (
     <div className="containerNav">
       <ul className="ulNav">
-
         <li className="lii">
           <h4>
-          {localStorage.getItem("userId") ? ( <Link className="linkk"  to="/" onClick={() => { logout();}}>خروج</Link> ) : ("")}
+            {localStorage.getItem("userId") ? (
+              <Link
+                className="linkk"
+                to="/"
+                onClick={() => {
+                  logout();
+                }}
+              >
+                خروج
+              </Link>
+            ) : (
+              ""
+            )}
           </h4>
         </li>
 
-
         <li className="lii">
           <h4>
-            <Link className="linkk" to="/Favorite">
-              قراءة لاحقاً
-            </Link>
+            {localStorage.getItem("userId") ? (
+              <Link
+                className="linkk"
+                to="/bookMark"
+                onChange={() => {
+                  hide();
+                }}
+              >
+                قراءة لاحقاً
+              </Link>
+            ) : (
+              ""
+            )}
+          </h4>
+        </li>
+        <li className="lii">
+          <h4>
+            {localStorage.getItem("userId") ? (
+              <Link
+                className="linkk"
+                to="/profile"
+                onChange={() => {
+                  hide();
+                }}
+              >
+                {" "}
+                الحساب{" "}
+              </Link>
+            ) : (
+              ""
+            )}
           </h4>
         </li>
 
         <li className="lii">
           <h4>
-            {localStorage.getItem("userId") ? ("")  : (<Link className="linkk" to="/user" onChange={() => { hide(); }}>تسجيل</Link> )}
+            {localStorage.getItem("userId") ? (
+              ""
+            ) : (
+              <Link
+                className="linkk"
+                to="/user"
+                onChange={() => {
+                  hide();
+                }}
+              >
+                تسجيل
+              </Link>
+            )}
           </h4>
         </li>
-
-      
 
         <li className="lii">
           <h4>

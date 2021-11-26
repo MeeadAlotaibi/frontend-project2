@@ -1,131 +1,66 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import riyadhArt from "../../images/riyadh-art.png";
+
 import "./style.css";
-import { useNavigate } from "react-router";
-import Nav from "../Nav";
 
-const BookMark = () => {
-  const navigate = useNavigate();
-  const [honorable, setHonorable] = useState([]);
-  const [resSearch, setResSearch] = useState("");
-  const [local, setLocal] = useState("");
-  const [remAdd, setRemAdd] = useState([]);
+const BASE_URL = "http://localhost:5000";
 
-  ////////////////////////////////////////////////////
+function BookMark() {
+  const [cultures, setCultures] = useState([]);
+  let navigate = useNavigate(); //// ...استخدمها اذا ابيه ينتقل من مكان الى آخر
 
+  /////////////////// وظيفة اليوزإفكت تعطيه أمر بأنهاول مايدخل الصفحة يعرض لي هذي البيانات
   useEffect(() => {
-    getHonorable();
+    getAllCultures(); /// تروح تستدعي الداله اللي جابت البيانات في الباك إند
   }, []);
 
-  ////////////////////////////////////////////////////
+  /////////////////// تروح تجيب البيانات من الباك اند
+  const getAllCultures = async () => {
 
-  const getLocalStorage = () => {
-    const item = JSON.parse(localStorage.getItem("user"));
-    setLocal(item);
-  };
-  ////////////////////////////////////////////////////
+    let email = JSON.parse(localStorage.getItem("userId"));
+    console.log(email.email);
 
-  useEffect(() => {
-    if (JSON.parse(localStorage.getItem("user"))) {
-      getDataEmail();
-    }
-    getLocalStorage();
-  }, []);
-
-  ////////////////////////////////////////////////////
-
-  // get all data
-  const getHonorable = async () => {
-    try {
-      const items = await axios.get("http://localhost:5000/honorbale");
-      setHonorable(items.data);
-    } catch (error) {
-      console.log("error on get honorable", error);
-    }
-  };
-  ////////////////////////////////////////////////////
-
-  // get character info
-  const characterInfo = (name) => {
-    navigate(`/character/name/${name}`);
-  };
-
-  ////////////////////////////////////////////////////
-
-  const getDataEmail = async () => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    const item = await axios.get(
-      `http://localhost:5000/favorite/${user.email}`
+    const cultures = await axios.get(
+      `${BASE_URL}/user/getFav?email=${email.email}` //// اغير بس الكلمة هذي
     );
-    setRemAdd(item.data);
+     //localhost:5000/user/getFav?email=meead@gmail.com
+    console.log(cultures.data); ///////// <=== عشان نشوف الداتا في الكونسول ونتاكد انها وصلت لنا !!
+    setCultures(cultures.data); //////// <===وتخزنهم في هذا المتغير  وتتغير الكلتشر بدال ماهي ارراي فاضية تصير تحتوي على هذه البيانات
   };
 
-  // ////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////////////////
 
-  const removeOrAdd = async (id) => {
-    let test = [];
-
-    remAdd.forEach((item) => {
-      test.push(item._id);
-    });
-    if (test.includes(id)) {
-      document.getElementById(`${id}`).innerHTML = "add";
-      /////
-      await axios.put(`http://localhost:5000/user/fav/${local.email}/${id}`);
-    } else {
-      document.getElementById(`${id}`).innerHTML = "remove";
-
-      await axios.put(`http://localhost:5000/removeFav/${local.email}/${id}`);
-    }
-    test = [];
-    getDataEmail();
+  const goInside = (id) => {
+    /////// بعدين اقول له روح ادخل على هذا العنصر و اعطيته الباث تبعه
+    console.log(id);
+    navigate(`/culture/${id}`);
   };
 
-  ////////////////////////////////////////////////////
   return (
-    <div>
-      {/* <Nav/> */}
-      <h1>Honorable</h1>
-      <input
-        type="text"
-        name="search"
-        onChange={(e) => {
-          setResSearch(e.target.value);
-        }}
-      />
-      {honorable
-        .filter((item) => {
-          if (resSearch === "") {
-            return item;
-          } else if (
-            item.name.toLowerCase().includes(resSearch.toLowerCase())
-          ) {
-            return item;
-          }
-        })
-        .map((items, index) => {
-          return (
-            <div key={index}>
-              <ul>
-                <li onClick={() => characterInfo(items.name)}>
-                  <img
-                    className="imageCharacter"
-                    src={items.img}
-                    alt="character face"
-                  />
-                  <h1>{items.name}</h1>
-                  <p>{items.price}</p>
-                </li>{" "}
-                <button id={items._id} onClick={() => removeOrAdd(items._id)}>
-                  Favorite
-                </button>
-              </ul>
+    /////// هنا يعرض لي ع البراوزر
+    <div className="allCluture">
+      {/* <img className="backImg1" src={riyadhArt} alt="backImg" /> */}
+      {/* <h1 className="text1">مشاريع ثقافية</h1> */}
+
+      {cultures && cultures.map((elem) => {
+        ///// يروح يمشي ع كل عنصر في الكولتشر وانو اذا ضغطت على هذا العنصر يستدعي فنكشن قو انسايد
+        return (
+          <>
+            <div
+              onClick={() => {
+                goInside(elem._id);
+              }}
+              className="oneCluture"
+            >
+              <img src={elem.img} alt="culture" />
+              <h5 className="cultureName"> {elem.title} </h5>
             </div>
-          );
-        })}
+          </>
+        );
+      })}
     </div>
   );
-};
-
+}
 export default BookMark;
