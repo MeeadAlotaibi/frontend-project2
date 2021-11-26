@@ -33,7 +33,7 @@ const App = () => {
       <Nav />
 
       <Routes>
-        <Route exact path="/Nav" element={<Nav />} />
+        {/* <Route exact path="/Nav" element={<Nav />} /> */}
         <Route exact path="/" element={<Home />} />
         <Route exact path="/urban" element={<Urban />} />
         <Route exact path="/tourism" element={<Tourism />} />
@@ -41,7 +41,6 @@ const App = () => {
         <Route exact path="/cultures" element={<Cultures />} />
         <Route exact path="/user" element={<Signup />} />
         <Route exact path="/login" element={<Login />} />
-
         <Route exact path="/Favorite" element={<BookMark />} />
       </Routes>
 

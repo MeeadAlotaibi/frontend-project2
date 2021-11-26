@@ -3,9 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./style.css";
 import { useNavigate } from "react-router";
-import Nav from "../Nav"
-
-
+import Nav from "../Nav";
 
 const BookMark = () => {
   const navigate = useNavigate();
@@ -25,7 +23,6 @@ const BookMark = () => {
   const getLocalStorage = () => {
     const item = JSON.parse(localStorage.getItem("user"));
     setLocal(item);
-    // console.log(local);
   };
   ////////////////////////////////////////////////////
 
@@ -79,9 +76,7 @@ const BookMark = () => {
     } else {
       document.getElementById(`${id}`).innerHTML = "remove";
 
-      await axios.put(
-        `http://localhost:5000/removeFav/${local.email}/${id}`
-      );
+      await axios.put(`http://localhost:5000/removeFav/${local.email}/${id}`);
     }
     test = [];
     getDataEmail();
@@ -90,7 +85,7 @@ const BookMark = () => {
   ////////////////////////////////////////////////////
   return (
     <div>
-      <Nav/>
+      {/* <Nav/> */}
       <h1>Honorable</h1>
       <input
         type="text"
