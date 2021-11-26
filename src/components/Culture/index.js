@@ -67,6 +67,8 @@ const Culture = (props) => {
     test = [];
     getDataEmail();
   };
+
+
   /////////////////////////////////////////////////////////////////
 
   return (
@@ -80,12 +82,14 @@ const Culture = (props) => {
           <div className="descripation">
             <h6 className="hhh">{culture.description}</h6>
           </div>
-          <button
+          {localStorage.getItem("userId") ? (<button
             className="info__button"
             id={culture._id}
             onClick={() => removeOrAdd(culture._id)}
           >
-           إقراء لاحقاً         </button>
+            إقراء لاحقاً
+          </button>) : ("")}
+          
         </div>
       ) : (
         <h1>loading ...</h1>
