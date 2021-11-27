@@ -72,8 +72,8 @@ const getCulture = async () => {
         <div className="oneitemHomeM">
 
 
-          <div>
-            <p className="cultureP"> {culture.title}</p>
+          <div className="jjj">
+            <p className="cultureP1"> {culture.title}</p>
             <img className="Oneculture" src={culture.img} alt="" />
           </div>
 

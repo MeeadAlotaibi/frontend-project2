@@ -1,13 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Mirza&family=Tajawal:wght@200;800&display=swap');
 
+
+*{
+  margin: 0;
+  padding: 0;
+}
 .ulNav {
   display: flex;
   justify-content: space-around;
   padding-top: 20px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
   background-color: rgb(255, 255, 255);
-  margin-right: 11%;
+  /* margin-right: 11%; */
 }
 
 .containerNav {
@@ -42,7 +47,9 @@ font-family: 'Tajawal', sans-serif;
    text-decoration: none;
   color: black;
   cursor: pointer;
-  margin-left: 10px;
+margin-right: 60px;
+margin-left: 60px;
+margin-top: 10px;
   list-style: none;  
 }
 

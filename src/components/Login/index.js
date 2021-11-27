@@ -24,7 +24,7 @@ const Login = () => {
 
   return (
     //////////////////////////////////////////////////////////////////////////////////////////////
-    <div className="bigdiv">
+    <div className="bigdiv1">
       <div className="signUpInput">
         <h6 className="register">تسجيل</h6>
         <input

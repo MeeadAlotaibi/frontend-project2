@@ -1,5 +1,5 @@
 .Oneculture {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   width: 600px;
   height: 450px;
   border-radius: 20px;
@@ -18,7 +18,10 @@
   font-size: 100px;
     color: rgb(2, 2, 88);
 }
-
+.jjj{
+  text-align: center;
+  align-items: center;
+}
 
 .descripation{
   font-family: 'Tajawal', sans-serif;
@@ -35,9 +38,9 @@
   height: 100%;
   width: 100%;
 }
-.cultureP{
+.cultureP1{
   font-family: 'Tajawal', sans-serif;
   color: rgb(2, 2, 88);
  font-size: 30px;
-margin-left: 200px;
+/* margin-left: 200px; */
 }

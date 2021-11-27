@@ -65,8 +65,7 @@ const Nav = () => {
                   hide();
                 }}
               >
-                {" "}
-                الحساب{" "}
+                الحساب
               </Link>
             ) : (
               ""
@@ -74,11 +73,11 @@ const Nav = () => {
           </h4>
         </li>
 
-        <li className="lii">
-          <h4>
-            {localStorage.getItem("userId") ? (
-              ""
-            ) : (
+        {localStorage.getItem("userId") ? (
+          ""
+        ) : (
+          <li className="lii">
+            <h4>
               <Link
                 className="linkk"
                 to="/user"
@@ -88,9 +87,9 @@ const Nav = () => {
               >
                 تسجيل
               </Link>
-            )}
-          </h4>
-        </li>
+            </h4>
+          </li>
+        )}
 
         <li className="lii">
           <h4>
