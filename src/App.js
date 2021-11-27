@@ -10,6 +10,8 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import BookMark from "./components/BookMark";
 import UserProfile from "./components/UserProfile";
+import Footer from "./components/Footer";
+
 
 
 
@@ -28,6 +30,7 @@ const App = () => {
         <Route exact path="/bookMark" element={<BookMark />} />
         <Route exact path="/profile" element={<UserProfile />} />
       </Routes>
+      <Footer />
     </>
   );
 };

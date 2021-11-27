@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://localhost:5000" //"https://project2-tuwaiq.herokuapp.com";
 
 const Login = () => {
   let navigate = useNavigate();
@@ -24,25 +24,27 @@ const Login = () => {
 
   return (
     //////////////////////////////////////////////////////////////////////////////////////////////
-    <>
-      {/* <img className="backImg" src={phot} alt="backImg" /> */}
+    <div className="bigdiv">
       <div className="signUpInput">
         <h6 className="register">تسجيل</h6>
         <input
+          className="inputt1"
           type="text"
-          placeholder=" email"
+          placeholder=" ايميل المستخدم"
           onChange={(e) => {
             setEmail(e.target.value);
           }}
         />
         <input
+          className="inputt1"
           type="password"
-          placeholder=" password"
+          placeholder=" كلمة المرور "
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
         <button
+          className="userBtn1"
           onClick={() => {
             let found = users.find((ele) => {
               return ele.email == email && ele.password == password;
@@ -62,7 +64,7 @@ const Login = () => {
         </button>
         <div>{message} </div>
       </div>
-    </>
+    </div>
   );
 };
 

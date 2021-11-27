@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Mirza&family=Tajawal:wght@200;900&display=swap");
+
+.one {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profileTitle{
+    margin-left: 38%;
+  font-family: "Tajawal", sans-serif;
+  color: rgb(2, 2, 88);
+}
+
+
+.profileImage {
+  margin-left: 33%;
+  width: 400px;
+  border-radius: 50%;
+  border-color: rgb(2, 2, 88);
+}
+
+.profileText{
+margin-right: 33%;
+}
+.cultureP{
+ margin-top: -5;
+  text-align: right;
+  margin-right: 90px;
+}
+
+
+

@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import logo from "./../../images/Vision.png";
+import { ImBookmarks } from "react-icons/im";
 import "./style.css";
-
-
 
 const Nav = () => {
   let navigate = useNavigate();
@@ -49,7 +48,7 @@ const Nav = () => {
                   hide();
                 }}
               >
-                قراءة لاحقاً
+                <ImBookmarks />
               </Link>
             ) : (
               ""

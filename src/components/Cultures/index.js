@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import riyadhArt from "../../images/riyadh-art.png";
+import Cult from "../../images/Cult.jpeg";
 
 import "./style.css";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL ="http://localhost:5000" //"https://project2-tuwaiq.herokuapp.com";
 
 function Cultures() {
   const [cultures, setCultures] = useState([]);
@@ -36,22 +36,22 @@ function Cultures() {
   return (
     /////// هنا يعرض لي ع البراوزر
     <div className="allCluture">
-      <img className="backImg1" src={riyadhArt} alt="backImg" />
+      <img className="backImg1" src={Cult} alt="backImg" />
       <h1 className="text1">مشاريع ثقافية</h1>
 
       {cultures.map((elem) => {
         ///// يروح يمشي ع كل عنصر في الكولتشر وانو اذا ضغطت على هذا العنصر يستدعي فنكشن قو انسايد
         return (
           <>
-              <div
-                onClick={() => {
-                  goInside(elem._id);
-                }}
-                className="oneCluture"
-              >
-                <img src={elem.img} alt="culture" />
-                <h5 className="cultureName"> {elem.title} </h5>
-              </div>
+            <div
+              onClick={() => {
+                goInside(elem._id);
+              }}
+              className="oneCluture"
+            >
+              <img className="immm" src={elem.img} alt="culture" />
+              <h5 className="cultureName"> {elem.title} </h5>
+            </div>
           </>
         );
       })}

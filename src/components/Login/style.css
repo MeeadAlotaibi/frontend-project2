@@ -1,6 +1,19 @@
-.fullPage{
-    background-image: url("../../images/registerBackground.jpeg");
-    height: 100%;
-    width: 100%;
-    background-size: cover; 
+.fullPage {
+  background-image: url("../../images/registerBackground.jpeg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.userBtn1 {
+  font-family: "Tajawal", sans-serif;
+  border-style: none;
+  border-radius: 3px;
+  padding: 5px;
+  margin-top: 80px;
+  color: rgb(2, 2, 88);
+  background-color:  #00000023;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 18px #73abc5;
+  margin-bottom: 30px;
 }

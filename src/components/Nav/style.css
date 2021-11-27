@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&family=Mirza&family=Tajawal:wght@200;800&display=swap');
+
 .ulNav {
   display: flex;
   justify-content: space-around;
@@ -6,31 +9,41 @@
   background-color: rgb(255, 255, 255);
   margin-right: 11%;
 }
+
 .containerNav {
   display: flex;
   justify-content: space-between;
+  border-bottom: 0.01px solid  rgb(210, 210, 231);
+
+
 }
 
-h2 {
+/* h2 {
   margin-top: 10px;
   padding-right: 30%;
   font-family: fantasy;
   font-size: 20px;
-}
+} */
 
-.loguot{
-  background-color:white;
+.loguot {
+  background-color: white;
   border-color: white;
   border-radius: px;
-
 }
 
 .lii {
+/*   
+  margin-left: 13%;
+  list-style: none;
   text-decoration: none;
+  color: black;
+  font-size: 18px; */
+font-family: 'Tajawal', sans-serif;
+   text-decoration: none;
   color: black;
   cursor: pointer;
   margin-left: 10px;
-  list-style: none;
+  list-style: none;  
 }
 
 .linkk {

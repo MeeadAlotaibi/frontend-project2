@@ -1,27 +1,43 @@
 .Oneculture {
+  margin-left: 20px;
   width: 600px;
   height: 450px;
   border-radius: 20px;
   box-shadow: black;
 }
 .oneitemHomeM{
-  display: flex;
+  width: 100%;
+  height: 100%;
+  display:flex;
   justify-content: center;
   align-items: center;
   justify-content:space-around;
   
 }
+.info__button{
+  font-size: 100px;
+    color: rgb(2, 2, 88);
+}
+
+
 .descripation{
-  margin-top: 20px;
-  height: 400px;
-  width: 400px;
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  color: rgb(2, 2, 88);
+  margin-top: 10%;
+  height: 500px;
+  width: 500px;
   text-align: center;
    font-size: 30px;
 }
 .hhh{
-  font-size: 30px;
+  font-size: 25px;
+  height: 100%;
+  width: 100%;
 }
 .cultureP{
-font-size: 30px;
+  font-family: 'Tajawal', sans-serif;
+  color: rgb(2, 2, 88);
+ font-size: 30px;
 margin-left: 200px;
 }

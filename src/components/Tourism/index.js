@@ -5,7 +5,7 @@ import phootoo from "../../images/vrps.jpeg";
 import "./style.css";
 
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://localhost:5000" //"https://project2-tuwaiq.herokuapp.com";
 
 function Tourism() {
   const [tourism, setTourism] = useState([]);

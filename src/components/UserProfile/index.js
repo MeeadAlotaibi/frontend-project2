@@ -15,18 +15,25 @@ const UserProfile = () => {
   return (
     <>
       {user ? (
-        <div className="oneitemHomeM">
-          <h1>Profile : </h1>
-          <div>
-            <img
-              className="Oneculture"
-              src={profileImage}
-              alt="profile Image"
-            />
+        <div>
+          <h1 className="profileTitle">معلومات الحساب </h1>
+
+          <div className="">
+            <div>
+              <img
+                className="profileImage"
+                src={profileImage}
+                alt="profile Image"
+              />
+            </div>
+
             <br />
-            <h3 className="cultureP"> {user.username}</h3>
+            <div className="profileText">
+              <h3 className="cultureP">{user.username} : اسم المستخدم </h3>
+              <h3 className="cultureP"> {user.email} : البريد الإبكتروني</h3>
+            </div>
           </div>
-          <h6 className="hhh">{user.password}</h6>
+          {/* <h6 className="hhh">{user.password}</h6> */}
         </div>
       ) : (
         <h1>loading ...</h1>
