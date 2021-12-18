@@ -18,3 +18,22 @@
 To run the server, execute:
 
 ```npm start```
+
+--- 
+
+<img width="1439" alt="Screen Shot 1443-05-14 at 11 10 37 PM" src="https://user-images.githubusercontent.com/92248111/146654483-49ca3f66-3007-4e9a-83d8-6c91f74273f5.png">
+
+---
+
+<img width="1309" alt="Screen Shot 1443-05-14 at 11 12 07 PM" src="https://user-images.githubusercontent.com/92248111/146654498-69b9cfdf-7c65-4c5e-b377-3ef27ce6c78b.png">
+
+---
+
+<img width="1421" alt="Screen Shot 1443-05-14 at 11 12 54 PM" src="https://user-images.githubusercontent.com/92248111/146654506-9f404a46-c469-4230-b935-bcfe71216cd1.png">
+
+
+
+
+
+
+
